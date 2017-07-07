@@ -115,6 +115,8 @@ sub begin {
 	if(($emailBody ne "") && $smtpuser ne ""){
 		sendnotification("[".localtime()."] Please check ".$host." for unauthorized access, checksum miss match.\n\n".$emailBody);
 	}
+	
+	fileDelete(fileName($sha1sum));
 
 }
 
