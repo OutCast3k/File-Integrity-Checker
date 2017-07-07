@@ -99,7 +99,7 @@ sub begin {
 			my $file_local_hash = sha1sum($file_local);
 			print "File Hash ".$file_local_hash."\n";
 
-			if($1 ne $file_local_hash){
+			if($1 eq $file_local_hash){
 				print "OK";
 			} else {
 				print "WARNING!!! WARNING!!! WARNING!!! WARNING!!!";
